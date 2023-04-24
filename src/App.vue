@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import { ref } from 'vue'
+
+const value1 = ref(true)
+const value2 = ref()
 // import {}
 </script>
 
@@ -9,7 +13,12 @@ import { RouterLink, RouterView } from 'vue-router'
 
     <div class="wrapper">
       <nav>
-        <el-button type="primary">Primary</el-button>
+        <!-- <el-button type="primary">Primary</el-button> -->
+        <el-switch v-model="value1" />
+        <el-time-picker v-model="value2" arrow-control placeholder="Arbitrary time" />
+        <el-badge :value="12" class="item">
+          <el-button>comments</el-button>
+        </el-badge>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
