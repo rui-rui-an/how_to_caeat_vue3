@@ -18,7 +18,7 @@ export const useUserInfoStore = defineStore({
     },
     loginOut() {
       // 处理退出登录的一些逻辑
-      return new Promise((rez, reject) => {
+      return new Promise((rez) => {
         rez('111')
       })
     }
